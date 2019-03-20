@@ -266,5 +266,19 @@ int main(){
 	for (int i=0;i<n;i++){
 		cin>>w[i];
 	}
+	cout<<endl<<"Hasil : \n";
+	for (int y=0;y<n;y++){
+		f=0;
+		for (int a=0;a<4;a++){
+			if((*Find[a])(w[y]) == 1){
+				cout<<"ada";
+				f++;
+				break;
+			}
+		}
+		if (f == 0)
+			cout<<"tidak";
+		cout<<endl;
+	}
  return 0;
 }
