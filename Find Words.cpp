@@ -194,45 +194,14 @@ int diagonal2(char* z){
 		d27[]="mdn",
 		d28[]="ph",
 		d29[]="o",
-		dr2[]="bs",
-		dr3[]="rne",
-		dr4[]="imds",
-		dr5[]="chdow",
-		dr6[]="knovor",
-		dr7[]="angsmfe",
-		dr8[]="bstpbpht",
-		dr9[]="rpratvmmn",
-		dr10[]="canrndvzmi",
-		dr11[]="ycckapawdtw",
-		dr12[]="gezdahcnultw",
-		dr13[]="oletwnqjaqqnb",
-		dr14[]="ztcwklwbdtmcug",
-		dr15[]="aposprdesoogwat",
-		dr16[]="rrojwaowoglala",
-		dr17[]="tnbjmpqswnpsj",
-		dr18[]="gddzamretwwa",
-		dr19[]="jrtrmwegoeb",
-		dr20[]="rgemgkncer",
-		dr21[]="enznopnze",
-		dr22[]="tscnroia",
-		dr23[]="amzqfnd",
-		dr24[]="wzgwbo",
-		dr25[]="zrsqq",
-		dr26[]="kcol",
-		dr27[]="ndm",
-		dr28[]="hp",
-		*pd2[]={d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28,d29,
-			dr2,dr3,dr4,dr5,dr6,dr7,dr8,dr9,dr10,dr11,dr12,dr13,dr14,dr15,dr16,dr17,dr18,dr19,dr20,dr21,dr22,dr23,dr24,
-			dr25,dr26,dr27,dr28};
+		*pd2[]={d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28,d29};
 	
-	for (int x=0;x<56;x++){
-		if (strstr(*(pd2+x),z) != '\0')
-			f++;
-	}
-	if (f == 0)
-		return 0;
-	else
-		return 1;
+	for (int i=0;i<29;i++){
+        	if (strstr(*(pd2+i),z) != '\0')
+            		return 1;
+        	if (strstr(strrev(*(pd2+i)),z) != '\0')
+            		return 1;   
+    	}
 }
 
 int main(){
