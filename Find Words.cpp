@@ -2,7 +2,47 @@
 #include <cstring>
 using namespace std;
 
-int horizontal(){
+int horizontal(char* z){
+  	char h1[] = "tgbwwinterwses", 
+	     h2[] = "aaunttmmhfoodnb",
+ 	     h3[] = "jlwcqldzmpmvdmr",
+	     h4[] = "asagmquwvvbsohi",
+	     h5[] = "bwplotanadtpgnc",
+	     h6[] = "rewngodjcpnatnk",
+	     h7[] = "eeotwosbqharrsa",
+	     h8[] = "azcgeswewnaknpb",
+	     h9[] = "dinnerqodlwdcar",
+	     h10[] = "onopkwmparktzcc",
+	     h11[] = "qbfrogmamwpweey",
+	     h12[] = "lqzqnnmrzjjsclg",
+	     h13[] = "mosgzczetdbooto",
+	     h14[] = "pdcrzmsngrdnrpz",
+	     h15[] = "ohnkzwaterjgtra",
+	     hr1[] = "nseswretniwwbgt",
+	     hr2[] = "bndoofhmmttnuaa",
+	     hr3[] = "rmdvmpmzdlqcwlj",
+	     hr4[] = "ihosbvvwuqmgasa",
+	     hr5[] = "cngptdanatolpwb",
+	     hr6[] = "kntanpcjdognwer",
+	     hr7[] = "asrrahqbsowtoee",
+	     hr8[] = "bpnkanwewsegcza",
+	     hr9[] = "racdwldoqrennid",
+	     hr10[] = "ccztkrapmwkpono",
+	     hr11[] = "yeewpwmamgorfbq",
+	     hr12[] = "glcsjjzrmnnqzql",
+	     hr13[] = "otoobdtezczgsom",
+	     hr14[] = "zprndrgnsmzrcdp",
+	     hr15[] = "artgjretawzknho",
+	     *ph[] = {h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,
+		      hr1,hr2,hr3,hr4,hr5,hr6,hr7,hr8,hr9,hr10,hr11,hr12,hr13,hr14,hr15};
+	for (int x=0;x<30;x++) {
+		if (strstr(*(ph+x),z) != '\0')
+			f++;
+	}
+	if (f == 0)
+		return 0;
+	else
+		return 1;
 }
 
 int vertikal(char* z){
