@@ -259,5 +259,12 @@ int main(){
   		}
 		cout<<endl;
 	}
+	
+	cout<<"\nBanyak kata yang akan dicari : ";cin>>n;
+	char w[n][15];
+	cout<<"\nDaftar kata yang akan dicari : \n";
+	for (int i=0;i<n;i++){
+		cin>>w[i];
+	}
  return 0;
 }
