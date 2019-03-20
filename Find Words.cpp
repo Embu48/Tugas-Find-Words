@@ -194,7 +194,8 @@ int diagonal2(char* z){
 }
 
 int main(){
- char soal[15][15]= {	{'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
+ 	int n;
+	char soal[15][15]= {	{'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 				{'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 				{'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
 				{'a','s','a','g','m','q','u','w','v','v','b','s','o','h','i'},
@@ -210,5 +211,13 @@ int main(){
 				{'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
 				{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}};
  int (*Find[])(char*)={horizontal,vertikal,diagonal1,diagonal2};
+	
+	cout<<"FIND WORDS!\n\n";
+	for(int x=0;x<15;x++){
+  		for(int y=0;y<15;y++){
+    			cout<<soal[x][y]<<" ";
+  		}
+		cout<<endl;
+	}
  return 0;
 }
