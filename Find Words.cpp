@@ -2,6 +2,8 @@
 #include <cstring>
 using namespace std;
 
+bool f;
+
 int horizontal(char* z){
   	char h1[] = "tgbwwinterwses", 
 	     h2[] = "aaunttmmhfoodnb",
