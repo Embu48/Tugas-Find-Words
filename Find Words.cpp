@@ -46,8 +46,7 @@ int vertikal(char* z){
 		v13[]="eddogtrnczecort",
 		v14[]="snmhnnspaceltpr",
 		v15[]="nbrickabrcygoza",
-		*pv[]={v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,
-		       vr1,vr2,vr3,vr4,vr5,vr6,vr7,vr8,vr9,vr10,vr11,vr12,vr13,vr14,vr15};
+		*pv[]={v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15};
 	
 	for (int i=0;i<15;i++){
         	if (strstr(*(pv+i),z) != '\0')
