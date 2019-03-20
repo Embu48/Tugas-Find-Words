@@ -86,47 +86,15 @@ int diagonal1(char* z){
 		d27[]=	"opt",
 		d28[]=	"zr",
 		d29[]=	"a",
-		dr2[]=	"ag",
-		dr3[]=	"jab",
-		dr4[]=	"aluw",
-		dr5[]=	"bswnw",
-		dr6[]=	"rwacti",
-		dr7[]=	"eepgqtn",
-		dr8[]=	"aewlmlmt",
-		dr9[]=	"dzonoqdme",
-		dr10[]=	"oictgtuzhr",
-		dr11[]=	"qnngwoawmfw",
-		dr12[]=	"lboneodnvpos",
-		dr13[]=	"mqfpessjavmoe",
-		dr14[]=	"pozrkewbcdbvds",
-		dr15[]=	"odsqowqeqptsdnn",
-		dr16[]=	"hcgngmowhnpomb",
-		dr17[]=	"nrznmpdnaaghr",
-		dr18[]=	"kzcmaalartni",
-		dr19[]=	"zmzrmrwkrnc",
-		dr20[]=	"wsezwkdnsk",
-		dr21[]=	"antjptcpa",
-		dr22[]=	"tgdjwzab",
-		dr23[]=	"erbsecr",
-		dr24[]=	"rdocec",
-		dr25[]=	"jnoly",
-		dr26[]=	"grtg",
-		dr27[]=	"tpo",
-		dr28[]=	"rz",
-		
-		*pd1[]={d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28,d29,
-			dr2,dr3,dr4,dr5,dr6,dr7,dr8,dr9,dr10,dr11,dr12,dr13,dr14,dr15,dr16,dr17,dr18,dr19,dr20,dr21,dr22,dr23,dr24,
-			dr25,dr26,dr27,dr28};
+		*pd1[]={d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28,d29};
 		
 		
-	for(int i=0;i<56;i++){
-		if (strstr(*(pd1+i),z) != '\0')
-			f++;
-	}
-	if(f == 0)
-		return 0;
-	else
-		return 1;
+	for (int i=0;i<29;i++){
+        	if (strstr(*(pd1+i),z) != '\0')
+            		return 1;
+        	if (strstr(strrev(*(pd1+i)),z) != '\0')
+            		return 1;   
+    	}
 }
 
 int diagonal2(char* z){
