@@ -5,7 +5,47 @@ using namespace std;
 int horizontal(){
 }
 
-int vertikal(){
+int vertikal(char* z){
+	char 	v1[]="tajabreadoqlmpo",
+		v2[]="galsweezinbqodh",
+		v3[]="buwapwocnofzscn",
+		v4[]="wncglntgnprqgrk",
+		v5[]="wtqmogweekonzzz",
+		v6[]="itlqtoosrwgncmw",
+		v7[]="nmduadswqmmmzsa",
+		v8[]="tmzwnjbeoparent",
+		v9[]="ehmvacqwdamztge",
+		v10[]="rfpvdphnlrwjdrr",
+		v11[]="wombtnaawkpjbdj",
+		v12[]="sovsparkdtwsong",
+		v13[]="eddogtrnczecort",
+		v14[]="snmhnnspaceltpr",
+		v15[]="nbrickabrcygoza",
+		vr1[]="opmlqodaerbajat",
+		vr2[]="hdoqbnizeewslag",
+		vr3[]="ncszfoncowpawub",
+		vr4[]="krgqrpngtnlgcnw",
+		vr5[]="zzznokeewgomqtw",
+		vr6[]="wmcngwrsootqlti",
+		vr7[]="aszmmmqwsdaudmn",
+		vr8[]="tnerapoebjnwzmt",
+		vr9[]="egtzmadwqcavmhe",
+		vr10[]="rrdjwrlnhpdvpfr",
+		vr11[]="jdbjpkwaantbmow",
+		vr12[]="gnoswtdkrapsvos",
+		vr13[]="trocezcnrtgodde",
+		vr14[]="rptlecapsnnhmns",
+		vr15[]="azogycrbakcirbn",
+		*pv[]={v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,
+		       vr1,vr2,vr3,vr4,vr5,vr6,vr7,vr8,vr9,vr10,vr11,vr12,vr13,vr14,vr15};
+	for (int x=0;x<30;x++){
+		if (strstr(*(pv+x),z) != '\0')
+			f++;
+	}
+	if(f == 0)
+		return 0;
+	else
+		return 1;
 }
 
 int diagonal1(char* z)
