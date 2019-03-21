@@ -97,48 +97,42 @@ int diagonal1(char* z){
     	}
 }
 
-int diagonal2(char* z){
-  	char	d1[]="n",
-		d2[]="sb",
-		d3[]="enr",
-		d4[]="sdmi",
-		d5[]="wodhc",
-		d6[]="rovonk",
-		d7[]="efmsgna",
-		d8[]="thpbptsb",
-		d9[]="nmmvtarpr",
-		d10[]="imzvdnrnac",
-		d11[]="wtdwapakccy",
-		d12[]="wtlunchadzeg",
-		d13[]="bnqqajqnwtelo",
-		d14[]="gucmtdbwlkwctz",
-		d15[]="tawgoosedrpsopa",
-		d16[]="alalgowoawjorr",
-		d17[]="jspnwsqpmjbnt",
-		d18[]="awwtermazddg",
-		d19[]="beogewmrtrj",
-		d20[]="recnkgmegr",
-		d21[]="eznponzne",
-		d22[]="aiorncst",
-		d23[]="dnfqzma",
-		d24[]="obzgzw",
-		d25[]="qqsrz",
-		d26[]="lock",
-		d27[]="mdn",
-		d28[]="ph",
-		d29[]="o",
-		*pd2[]={d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28,d29};
-	
-	for (int i=0;i<29;i++){
-        	if (strstr(*(pd2+i),z) != '\0')
+int diagonal2(char* z, char soal[15][15]){
+  	char pd2[30][15];
+	int i = 0,x=0;
+    while (i < 15)
+    {
+        int k = 0;
+        int l = i;
+        while (k < 15 && l < 15)
+        {
+            pd2[x][k]=soal[k][l];
+            k++;l++;
+        }
+        i++;x++;
+    }
+    i = 0;
+    while (i < 15)
+    {
+        int k = i;
+        int l = 0;
+        while (k < 15 && l < 15)
+        {
+            pd2[x][l]=soal[k][l];
+            k++;l++;
+        }
+        i++;x++;
+    }
+	for (int i=0;i<30;i++){
+        	if (strstr(pd2[i],z) != '\0')
             		return 1;
-        	if (strstr(strrev(*(pd2+i)),z) != '\0')
+        	if (strstr(strrev(pd2[i]),z) != '\0')
             		return 1;   
     	}
 }
 
 int main(){
- 	int n,(*Find[])(char*)={horizontal,vertikal,diagonal1,diagonal2};
+ 	int n;
 	char soal[15][15]= {	{'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 				{'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 				{'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
@@ -154,6 +148,7 @@ int main(){
 				{'m','o','s','g','z','c','z','e','t','d','b','o','o','t','o'},
 				{'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
 				{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}};
+	int (*Find[])(char*,char soal[15][15])={horizontal,vertikal,diagonal1,diagonal2};
 
 	cout<<"FIND WORDS!\n\n";
 	for(int x=0;x<15;x++){
@@ -173,7 +168,7 @@ int main(){
 	for (int y=0;y<n;y++){
 		f=0;
 		for (int a=0;a<4;a++){
-			if((*Find[a])(w[y]) == 1){
+			if((*Find[a])(w[y],soal) == 1){
 				cout<<y+1<<". ada";
 				f++;
 				break;
