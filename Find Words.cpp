@@ -44,9 +44,11 @@ int diagonal1(char* z, char soal[15][15]){
 		while (k < 15 && l < 15)
 		{
 			pd1[x][k]=soal[k][l];
-			k--;l++;
+			k--;
+			l++;
 		}
-		i++;x++;
+		i++;
+		x++;
 	}
 	int c = 13;
 	while (c>=0)
@@ -56,9 +58,11 @@ int diagonal1(char* z, char soal[15][15]){
 		while (k >=0  && l < 15)
 		{
 			pd1[x][l]=soal[k][l];
-			k--;l++;
+			k--;
+			l++;
 		}
-		c--;x++;
+		c--;
+		x++;
 	}
 	for (int i=0;i<30;i++)
 	{
@@ -79,9 +83,11 @@ int diagonal2(char* z, char soal[15][15]){
         while (k < 15 && l < 15)
         {
             pd2[x][k]=soal[k][l];
-            k++;l++;
+            k++;
+	    l++;
         }
-        i++;x++;
+        i++;
+	x++;
     }
     i = 0;
     while (i < 15)
@@ -91,9 +97,11 @@ int diagonal2(char* z, char soal[15][15]){
         while (k < 15 && l < 15)
         {
             pd2[x][l]=soal[k][l];
-            k++;l++;
+            k++;
+	    l++;
         }
-        i++;x++;
+        i++;
+	x++;
     }
 	for (int i=0;i<30;i++){
         	if (strstr(pd2[i],z) != '\0')
