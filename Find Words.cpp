@@ -56,45 +56,39 @@ int vertikal(char* z){
     	}
 }
 
-int diagonal1(char* z){
-	char	d1[]=	"t",
-		d2[]=	"ga",
-		d3[]=	"baj",
-		d4[]=	"wula",
-		d5[]=	"wnwsb",
-		d6[]=	"itcawr",
-		d7[]=	"ntqgpee",
-		d8[]=	"tmlmlwea",
-		d9[]=	"emdqonozd",
-		d10[]=	"rhzutgtcio",
-		d11[]=	"wfmwaowgnnq",
-		d12[]=	"sopvndoenobl",
-		d13[]=	"eomvajssepfqm",
-		d14[]=	"sdvbdcbwrkrzop",
-		d15[]=	"nndstpqeqwoqsdo",
-		d16[]=	"bmopnhwomgngch",
-		d17[]=	"rhgaandpmnzrn",
-		d18[]=	"intralaamczk",
-		d19[]=	"cnrkwrmrzmz",
-		d20[]=	"ksndkwzesw",
-		d21[]=	"apctpjtna",
-		d22[]=	"bazwjdgt",
-		d23[]=	"rcesbre",
-		d24[]=	"cecodr",
-		d25[]=	"ylonj",
-		d26[]=	"gtrg",
-		d27[]=	"opt",
-		d28[]=	"zr",
-		d29[]=	"a",
-		*pd1[]={d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28,d29};
-		
-		
-	for (int i=0;i<29;i++){
-        	if (strstr(*(pd1+i),z) != '\0')
+int diagonal1(char* z, char soal[15][15]){
+	char pd1[30][15];
+	int i = 0,x=0;
+   	while (i < 15)
+	{
+		int k = 14;
+		int l = i;
+		while (k < 15 && l < 15)
+		{
+			pd1[x][k]=soal[k][l];
+			k--;l++;
+		}
+		i++;x++;
+	}
+	int c = 13;
+	while (c>=0)
+	{
+		int k = c;
+		int l = 0;
+		while (k >=0  && l < 15)
+		{
+			pd1[x][l]=soal[k][l];
+			k--;l++;
+		}
+		c--;x++;
+	}
+	for (int i=0;i<30;i++)
+	{
+		if (strstr(pd1[i],z) != '\0')
             		return 1;
-        	if (strstr(strrev(*(pd1+i)),z) != '\0')
-            		return 1;   
-    	}
+        	if (strstr(strrev(pd1[i]),z) != '\0')
+            		return 1;
+	}
 }
 
 int diagonal2(char* z, char soal[15][15]){
