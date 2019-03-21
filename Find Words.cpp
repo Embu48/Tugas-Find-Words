@@ -4,54 +4,32 @@ using namespace std;
 
 bool f;
 
-int horizontal(char* z){
-  	char h1[] = "tgbwwinterwses", 
-	     h2[] = "aaunttmmhfoodnb",
- 	     h3[] = "jlwcqldzmpmvdmr",
-	     h4[] = "asagmquwvvbsohi",
-	     h5[] = "bwplotanadtpgnc",
-	     h6[] = "rewngodjcpnatnk",
-	     h7[] = "eeotwosbqharrsa",
-	     h8[] = "azcgeswewnaknpb",
-	     h9[] = "dinnerqodlwdcar",
-	     h10[] = "onopkwmparktzcc",
-	     h11[] = "qbfrogmamwpweey",
-	     h12[] = "lqzqnnmrzjjsclg",
-	     h13[] = "mosgzczetdbooto",
-	     h14[] = "pdcrzmsngrdnrpz",
-	     h15[] = "ohnkzwaterjgtra",
-	     *ph[] = {h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14,h15};
-	
+int horizontal(char* z, char soal[15][15]){
+  	char ph[15][15];
+  	for(int x=0;x<15;x++){
+  		for(int y=0;y<15;y++){
+  			ph[x][y]=soal[x][y];
+		  }
+	  }
 	for (int i=0;i<15;i++){
-        	if (strstr(*(ph+i),z) != '\0')
+        	if (strstr(ph[i],z) != '\0')
             		return 1;
-        	if (strstr(strrev(*(ph+i)),z) != '\0')
+        	if (strstr(strrev(ph[i]),z) != '\0')
             		return 1;   
     	}
 }
 
-int vertikal(char* z){
-	char 	v1[]="tajabreadoqlmpo",
-		v2[]="galsweezinbqodh",
-		v3[]="buwapwocnofzscn",
-		v4[]="wncglntgnprqgrk",
-		v5[]="wtqmogweekonzzz",
-		v6[]="itlqtoosrwgncmw",
-		v7[]="nmduadswqmmmzsa",
-		v8[]="tmzwnjbeoparent",
-		v9[]="ehmvacqwdamztge",
-		v10[]="rfpvdphnlrwjdrr",
-		v11[]="wombtnaawkpjbdj",
-		v12[]="sovsparkdtwsong",
-		v13[]="eddogtrnczecort",
-		v14[]="snmhnnspaceltpr",
-		v15[]="nbrickabrcygoza",
-		*pv[]={v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15};
-	
+int vertikal(char* z, char soal[15][15]){
+	char pv[15][15];
+	for(int x=0;x<15;x++){
+		for(int y=0;y<15;y++){
+			pv[x][y]=soal[y][x];
+		}
+	}
 	for (int i=0;i<15;i++){
-        	if (strstr(*(pv+i),z) != '\0')
+        	if (strstr(pv[i],z) != '\0')
             		return 1;
-        	if (strstr(strrev(*(pv+i)),z) != '\0')
+        	if (strstr(strrev(pv[i]),z) != '\0')
             		return 1;   
     	}
 }
